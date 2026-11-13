@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_shared_attatchments",
+  "info": {
+    "displayName": "attatchment"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "image",
+        "video",
+        "link",
+        "file"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

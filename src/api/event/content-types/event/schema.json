@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Evento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "location": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "cost": {
+      "type": "string"
+    },
+    "registerLink": {
+      "type": "string"
+    },
+    "dateTime": {
+      "type": "datetime"
+    },
+    "endDateTime": {
+      "type": "datetime"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "audiences": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::audience.audience",
+      "inversedBy": "events"
+    },
+    "levels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::level.level",
+      "inversedBy": "events"
+    },
+    "likes": {
+      "type": "integer"
+    }
+  }
+}
